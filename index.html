@@ -12,9 +12,18 @@
 </head>
 
 <body>
-
+<canvas id='canvas'></canvas>
 <script type="text/python">
 from browser import document
+import turtle
+
+# Optional: tell turtle which HTML element to use
+turtle.set_defaults(turtle_canvas_wrapper=document['canvas'])
+
+t = turtle.Turtle()
+for _ in range(4):
+    t.forward(100)
+    t.left(90)
 
 document <= "Hello !"
 </script>
